@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('fonts/UntitledSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('fonts/UntitledSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('fonts/UntitledSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('fonts/UntitledSans-Black.ttf') format('truetype');
+    font-weight: 900; /* O el valor correspondiente */
+    font-style: normal;
+}
+
+*{
+margin: 0; /* Elimina márgenes del body */
+    padding: 0; /* Elimina paddings del body */
+    font-family: 'Untitled Sans', sans-serif !important;
+    box-sizing: border-box !important;
+}
+
+
+.bg-custom {
+    background-color: #f4c2c3;
+}
+
+.bg-custom2 {
+    background-color: #ead9ac;
+}
+
+
+.skill-icon {
+    width: 80px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.skill-icon:hover {
+    filter: grayscale(0);
+}
+
+/* Estilos generales para el contenedor */
+.ticker-wrapper {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f4c2c3; /* Color de fondo */
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 30s linear infinite; /* Duración y tipo de animación */
+}
+
+.ticker-text {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    font-weight: 300;  /* Ligero como el de Format */
+    letter-spacing: 8px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding-right: 50px; /* Espaciado entre repeticiones del texto */
+    color: #333;
+}
+
+/* Animación para el desplazamiento */
+@keyframes scrollText {
+    0% {
+        transform: translateX(0); /* Comienza en la posición inicial */
+    }
+    100% {
+        transform: translateX(-50%); /* Se desplaza hasta la mitad del contenedor, donde comienza el duplicado */
+    }
+}
+
+.portfolio-card {
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Añade transición para suavizar el efecto */
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+
+.portfolio-card .card-img {
+    height: 220px; /* Altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+}
+
+.portfolio-card .text-above-button {
+    position: absolute; /* Posiciona el texto de forma absoluta */
+    bottom: 40px; /* Ajusta la posición desde la parte inferior */
+    left: 10px; /* Ajusta la posición desde la izquierda */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente para el texto */
+    padding: 5px 10px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.btn-card {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+
+
